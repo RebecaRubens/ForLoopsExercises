@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculadora de café com leite</h1> <br><br><br>
+    Quantas xícaras de café com leite você já tomou na vida? <input type="number" id="ipt_qtd">
+    <button onclick="ver()"> Ver Quantidade </button>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function ver(){
+        var qtd = Number(ipt_qtd.value);
+        var fotoPo = '<img src="https://minhasaude.proteste.org.br/wp-content/uploads/2023/06/colher-carregando-punhado-de-leite-em-po-sobre-fundo-branco.jpg" style="width: 100px;">';
+        var fotoCafe = '<img src="https://img.freepik.com/fotos-premium/po-de-cafe-em-uma-colher-isolado-no-fundo-branco_253984-4978.jpg" style="width: 100px;">';
+        var xicaraPo = fotoPo;
+        div_msg.innerHTML = " ";
+
+    for(var cont = 1; cont <= qtd; cont++) {
+        div_msg.innerHTML += `${cont} - ${xicaraPo} ${fotoCafe} ${fotoCafe} <br><br>`;
+    }
+
+    }
+</script>

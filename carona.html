@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>carona</h1> <br><br><br>
+    Quantas pessoas vão entrar no carro? <input type="number" id="ipt_passageiros"> <br><br>
+    Qual é a quantidade de passageiros que o veículo suporta? <input type="number" id="ipt_limite">
+    <button onclick="exibir()"> #PartiuCarona</button> <br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function exibir(){
+        var passageiros = ipt_passageiros.value;
+         var limite = ipt_limite.value;
+        
+        div_msg.innerHTML = " "
+
+        
+        
+            for(cont = 1; cont <= passageiros; cont++) {
+                if (cont == 1) {
+                div_msg.innerHTML = ` Entrou o ${cont}º passageiro (que é motorista) <br>`
+            }
+           
+            
+            else if (cont >1 && cont <= limite) {
+                div_msg.innerHTML += ` Entrou o ${cont}º passageiro <br>`
+            }
+            
+            else {
+                div_msg.innerHTML += ` O ${cont}º passageiro terá que esperar <br>`
+            }
+           
+        }
+
+        if (passageiros < 1) {
+            alert('A quantidade de passageiros inserida é inválida')
+        }
+    }
+</script>

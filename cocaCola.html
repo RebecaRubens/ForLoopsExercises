@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coca</title>
+</head>
+<body>
+    <center>
+    <h1>Calculadora de CocaCola HAHAHAHAHAHAHA</h1> <br><br><br>
+
+    Quantas Coca-Cola VOCÊ ja bebeu na Vida? <input type="number" id="ipt_qtdCoca"> <br><br>
+    <button onclick="ver()"> Ver quantidade </button> <br><br>
+
+</center>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function ver(){
+        var qtd = ipt_qtdCoca.value;
+        div_msg.innerHTML = " ";
+        for (var cont = 1; cont <= qtd; cont++) {
+            div_msg.innerHTML += `${cont} - <img src="https://png.pngtree.com/png-vector/20231115/ourlarge/pngtree-coca-cola-bottled-drink-isolated-png-image_10465016.png" style="width: 100px;" > `;
+        }
+    }
+</script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>num pares</title>
+</head>
+
+<body>
+    <h1>S2 PARES</h1>
+    <h3> esse site te mostra todos os números pares contidos dentro do numero que você inserir</h3>
+    insira um número inteiro: <input type="number" id="ipt_n">
+    <button onclick="exibir()">S2 Pares </button>
+    <div id="div_msg"></div>
+</body>
+
+</html>
+<script>
+    function exibir() {
+        var n = ipt_n.value;
+        div_msg.innerHTML = " "
+        for (var c = 0; c <= n; c += 2) {
+            div_msg.innerHTML += `${c} <br>`
+        }
+    }
+</script>

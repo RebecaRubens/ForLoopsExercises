@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    insira um numero: <input type="number" id="ipt_n">
+    insira uma frase: <input type="text" id="ipt_f"> <br><br>
+    <button onclick="repetir()">Papagaio</button>
+</body>
+
+</html>
+<script>
+
+    function repetir() {
+        var n = ipt_n.value;
+        var f = ipt_f.value;
+        var texto = "";
+        
+        for (var c = 1; c <= n; c++) {
+            texto += f;
+        }
+
+        for (var c = 0; c <= n; c++) {
+            alert(`${c}- ${texto}`);
+        }
+    }
+</script>

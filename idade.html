@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    insira sua idade: <input type="number" oninput="exibir()" id="ipt_idade">
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function exibir(){
+        var idade = ipt_idade.value;
+    for (var cont = 0; cont <= idade; cont++){
+        if (idade >=0 && idade <= 4) {
+            div_msg.innerHTML = '(primeira infância) <br>'
+        }
+        else if (idade >4 && idade <= 6) {
+            div_msg.innerHTML = '(pré-escolar) <br>'
+        }
+        else if (idade >6 && idade <= 10) {
+            div_msg.innerHTML = '(segunda infância) <br>'
+        }
+        else if (idade >10 && idade <= 18) {
+            div_msg.innerHTML = '(Adolescência) <br>'
+        }
+        else if (idade >18 && idade <= 50) {
+            div_msg.innerHTML = '(Adulto) <br>'
+        }
+        else if (idade >50 && idade <= 100) {
+            div_msg.innerHTML = '(Melhor idade) <br>'
+        }
+        else if (idade >100) {
+            div_msg.innerHTML = '(Matusalém) <br>'
+        }
+
+        div_msg.innerHTML += `${cont} anos `
+                                                                                    
+
+    }}
+</script>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantas voltas o carro dará em uma corrida? <input type="number" id="ipt_v">
+    <button onclick="exibir()">Iniciar corrida</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function exibir(){
+        var v = ipt_v.value;
+        div_msg.innerHTML = " ";
+        for(var c=1; c<=v; c++) {
+            div_msg.innerHTML+= `carro dando a ${c}ª volta <br>`
+        }
+        div_msg.innerHTML += 'corrida finalizada!';
+    }
+</script>

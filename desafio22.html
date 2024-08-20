@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    limite inferior da amostragem: <input type="number"  placeholder="maior que 1" id="ipt_inferior"> <br><br>
+    limite superior da amostragem: <input type="number"  id="ipt_superior"><br><br>
+    Número para testar a divisibilidade: <input type="number" placeholder="entre 3 e 10" id="ipt_divisao"> <br><br>
+    <button onclick="contar()"> Contar </button> <br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function contar(){
+        var inferior = ipt_inferior.value;
+        var superior = ipt_superior.value;
+        var divisivel = ipt_divisao.value;
+        div_msg.innerHTML = '';      
+        
+        // if (inferior < 1 || superior >=100 || superior < inferior || divisivel <3 || divisivel >10) {
+            //alert('Os números inseridos são inválidos')
+       // }
+
+        for(var cont = inferior; cont <= superior; cont++) {
+            if( cont % divisivel === 0) {
+                div_msg.innerHTML += `${cont} <br> `;
+            }
+        }
+
+        var soma = Number (cont * cont);
+        var média = Number (cont*cont/cont);
+
+        div_msg.innerHTML = ` QUANTIDADE DE NUMEROS EXIBIDOS: ${cont} <br>
+        SOMATÓRIO DOS NÚMEROS EXIBIDOS: ${soma} <br>
+        MÉDIA DOS NUMEROS EXIBIDOS: ${media} <br>
+        MAIOR NÚMERO EXIBIDO: ${superior} <br>
+        MENOR NÚMERO EXIBIDO: ${inferior} <br>
+         `;
+    }
+</script>

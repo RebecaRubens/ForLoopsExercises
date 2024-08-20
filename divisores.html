@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>divisores</title>
+</head>
+<body>
+    <h1>CALCULADORA DE DIVISORES</h1>
+    insira um número: <input type="number" id="ipt_num">
+    <button onclick="ver()"> Ver divisores </button>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function ver(){
+        var num = Number(ipt_num.value);
+       
+    if (num >0 && num <=100){
+            for(cont = 1; cont <= num; cont++) {
+
+                if(num % cont == 0) {
+                    console.log(1)
+                    div_msg.innerHTML += `${cont} <br>`;
+                }
+            }
+        }
+    }
+</script>
